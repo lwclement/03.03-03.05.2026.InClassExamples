@@ -1,0 +1,37 @@
+public class Lamb extends Ham {
+    public void b() {
+        System.out.print("Lamb b   ");
+    }
+}
+
+public class Ham {
+    public void a() {
+        System.out.print("Ham a   ");
+        b();
+    }
+
+    public void b() {
+        System.out.print("Ham b   ");
+    }
+
+    public String toString() {
+        return "Ham";
+    }
+}
+
+public class Spam extends Yam {
+    public void b() {
+        System.out.print("Spam b   ");
+    }
+}
+
+public class Yam extends Lamb {
+    public void a() {
+        System.out.print("Yam a   ");
+        super.a();
+    }
+
+    public String toString() {
+        return "Yam";
+    }
+}
